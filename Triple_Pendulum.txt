@@ -1,0 +1,24 @@
+A double-pendulum in gravity field
+Body Mass And Inertia
+'Pendulum_1' 1. .005  0. 0. 8.E-6 0. .005 
+0. 0.125 0. 1. 0. 0. 0. Euler Param
+'Pendulum_2' 1.  .005   0. 0. 8.E-6 0. .005
+0. 0.375 0. 1. 0. 0. 0. Euler Param
+'Pendulum_3' 1.  .005  0. 0. 8.E-6 0. .005
+0. 0.625 0. 1. 0. 0. 0. Euler Param
+Joint Constraints
+'Rev_1' Revolute 1 0. -0.125 0. 1. 0. 0. 0. Rotation Vector DEGREES 
+                 0
+'Rev_2' Revolute 2 0. -0.125 0. 1. 0. 0. 0. Rotation Vector DEGREES 
+                 1 0. 0.125 0. 1. 0. 0. 0. Rotation Vector DEGREES
+'Rev_3' Revolute 3 0. -0.125 0. 1. 0. 0. 0. Rotation Vector DEGREES 
+                 2 0. 0.125 0. 1. 0. 0. 0. Rotation Vector DEGREES
+Gravity Specification
+0. 0. -10.
+Inhomogeneous Initial Rate
+1 0. 0. 0. 0. 0. 0. 0.
+2 0. 0. 0. 0. 0. 0. 0.
+3 0. 0. 0. 0. 0. 0. 0.
+Evaluation At Times
+0. Step 0.001 2
+End Of Data         
