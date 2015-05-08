@@ -124,6 +124,9 @@ while 1
       if size(Stri,1)<3,Stri(3,1)='R';end
       if length(Inte)==1
         Const.body2{nj}=Inte(1);
+        if isempty(Real)~=1
+            Const.r2{nj}=Real(1:3);
+        end
         if strcmp(JointType,'UNI'),%Orientation at 2nd body only needed for universal joint
           if upper(Stri(1))=='R' & upper(Stri(2))=='V' & upper(Stri(3))=='R'
             A=esta('rotvect',Real(1:4));
@@ -229,7 +232,7 @@ while 1
           eval('Disctimes=[Disctimes stepp(line)];','Disctimes=stepp(line);')
        else
           Case.evalt=Disctimes;
-          Stri(5,1)=' ';
+%           Stri(5,1)=' ';
           break
        end
      end
